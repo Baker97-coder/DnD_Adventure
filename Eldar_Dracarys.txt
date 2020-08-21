@@ -1,16 +1,16 @@
-name : Eldar Dracarys
-Strength : 18
-S_modifier : 4
-Dexterity : 15
-D_modifier : 2
-Constitution : 16
-C_modifier : 3
-Intelligence : 10
-I_modifier : -1
-Wisdom : 11
-W_modifier : 0
-Charisma : 12
-CH_modifier : 1
-Hit_points : 48
-Current_hit_points : 48
-potential_attack_damage : 8
+name :Eldar Dracarys
+Strength :18
+S_modifier :4
+Dexterity :15
+D_modifier :2
+Constitution :16
+C_modifier :3
+Intelligence :10
+I_modifier :-1
+Wisdom :11
+W_modifier :0
+Charisma :12
+CH_modifier :1
+Hit_points :48
+Current_hit_points :48
+potential_attack_damage :8

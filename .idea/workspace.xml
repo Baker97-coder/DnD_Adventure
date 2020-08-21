@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="656f3620-0c08-441c-a39d-25c7649089d4" name="Default Changelist" comment="" />
+    <list default="true" id="656f3620-0c08-441c-a39d-25c7649089d4" name="Default Changelist" comment="completed txt file for game">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eldar_Dracarys.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Eldar_Dracarys.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,6 +74,14 @@
       <option name="presentableId" value="Default" />
       <updated>1597872918957</updated>
     </task>
+    <task id="LOCAL-00001" summary="completed txt file for game">
+      <created>1597963058512</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597963058512</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -82,5 +94,35 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="completed txt file for game" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed txt file for game" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="936" height="269" key="GridCell.Tab.0.bottom" timestamp="1597968796249">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="269" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597968796249" />
+    <state width="936" height="269" key="GridCell.Tab.0.center" timestamp="1597968796249">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="269" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597968796249" />
+    <state width="936" height="269" key="GridCell.Tab.0.left" timestamp="1597968796249">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="269" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597968796249" />
+    <state width="936" height="269" key="GridCell.Tab.0.right" timestamp="1597968796249">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="269" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597968796249" />
+    <state x="72" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597963065791">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="72" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597963065791" />
+    <state x="297" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597963039705">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="297" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597963039705" />
   </component>
 </project>
