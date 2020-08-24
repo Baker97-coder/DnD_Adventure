@@ -14,7 +14,27 @@ def skeleton_damage(skeleton_hitpoints):
     return skeleton_hitpoints
 
 
+def sword_bow_attack(enemy):
+    if "bow" in player_attack:
+        print("\nyou take out an arrow with a silent confidence that speaks to your skill \n"
+              "and pull it against the string. You let it fly")
+        enemy.skel_current_hitpoints = skeleton_damage(first_skel.skel_current_hitpoints)
+    else:
+        print("You hold your sword as a fire burns hot inside you and you strike!")
+        enemy.skel_current_hitpoints = skeleton_damage(first_skel.skel_current_hitpoints)
+    return enemy.skel_current_hitpoints
+
+
+def skel_attack(skeleton, Current_hit_point):
+    if skeleton.skel_current_hitpoints > 0:
+        enemy_damage = random.randint(1, skeleton.skel_attack)
+        print("The skeleton hits you with his sword, you take " + str(enemy_damage))
+        Current_hit_point = int(Current_hit_point) - enemy_damage
+        print("You have " + str(Current_hit_point) + " hitpoints")
+    return Current_hit_point
+
 # main
+
 
 print("Welcome to my text-based DnD adventure" + "\n")
 
@@ -40,7 +60,7 @@ skel_attack, skel_hitpoints, skel_current_hitpoints = [d.split(":")[1].split("/n
 
 
 class Skeletons:
-    def __init__ (self, skel_attack, skel_hitpoints, skel_current_hitpoints, distance):
+    def __init__(self, skel_attack, skel_hitpoints, skel_current_hitpoints, distance):
         self.skel_attack = int(skel_attack)
         self.skel_hitpoints = int(skel_hitpoints)
         self.skel_current_hitpoints = int(skel_current_hitpoints)
@@ -78,10 +98,10 @@ while first_skel.skel_current_hitpoints > 0:
     if "bow" in player_attack:
         print("\nyou take out an arrow with a silent confidence that speaks to your skill \n"
               "and pull it against the string. You let it fly")
-        first_skel.skel_current_hitpoints = skeleton_damage(first_skel.skel_current_hitpoints)
+        first_skel.skel_current_hitpoints = skeleton_damage(first_skel.skel_current_hitpoints) # function call here
     else:
         print("You hold your sword as a fire burns hot inside you and you strike!")
-        first_skel.skel_current_hitpoints = skeleton_damage(first_skel.skel_current_hitpoints)
+        first_skel.skel_current_hitpoints = skeleton_damage(first_skel.skel_current_hitpoints) # function call here
     if first_skel.skel_distance > 0:
         first_skel.skel_distance = first_skel.skel_distance - 1
     elif first_skel.skel_distance > 0 & first_skel.skel_current_hitpoints > 0:
@@ -89,3 +109,41 @@ while first_skel.skel_current_hitpoints > 0:
         print("The skeleton hits you with his sword, you take " + str(enemy_damage))
         Current_hit_point = int(Current_hit_point) - enemy_damage
         print("You have " + str(Current_hit_point) + " hitpoints")
+
+print("After your victory, you continue deeper into the cave. You realize you haven't made any\n"
+      "kind of turn or twist, it just goes further. Eventually you come across a door on your right.\n"
+      "It's an ancient door and you're not sure it will even open due to its age.\n")
+
+first_door = input("Do you try to open and enter the room? (y) or (n) : ")
+
+if "y" in first_door:
+    if int(Strength) > 10:
+        print("You open the door even though its hinges were rusted and the door was heavy.\n"
+              "You walk in and see a chest at the back of the room. As you approach it, two skeletons\n"
+              "appear from the ground. they both have swords with one being 15 ft away. and the other\n"
+              "being 30 ft away. You must fight.\n")
+        room_skel1 = Skeletons(skel_attack, skel_hitpoints, skel_current_hitpoints, 1)
+        room_skel2 = Skeletons(skel_attack, skel_hitpoints, skel_current_hitpoints, 2)
+
+        while room_skel1.skel_current_hitpoints > 0 & room_skel2.skel_current_hitpoints > 0:
+            player_attack = input("do you use your bow or sword? : ")
+            attack_which = int(input("Which skeleton? (1) for first one (he is closest), (2) for second one : "))
+
+            if attack_which == 1:
+                room_skel1.skel_current_hitpoints = sword_bow_attack(room_skel1)
+            else:
+                room_skel2.skel_current_hitpoints = sword_bow_attack(room_skel2)
+
+            room_skel1.skel_distance -= 1
+            room_skel2.skel_distance -= 1
+
+            if room_skel1.skel_distance <= 0:
+                Current_hit_point = skel_attack(room_skel1, Current_hit_point)
+            if room_skel2.skel_distance <= 0:
+                Current_hit_point = skel_attack(room_skel2, Current_hit_point)
+
+
+    else:
+        print("you could not open the door, it was too heavy. You continue on.")
+
+print("You start your way down the cave again.")
