@@ -1,0 +1,3 @@
+skel_attack :3
+skel_hitpoints :6
+skel_current_hitpoints : 6
