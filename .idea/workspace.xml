@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="656f3620-0c08-441c-a39d-25c7649089d4" name="Default Changelist" comment="completed txt file for game">
+    <list default="true" id="656f3620-0c08-441c-a39d-25c7649089d4" name="Default Changelist" comment="added unpacking assignment">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eldar_Dracarys.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Eldar_Dracarys.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +33,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1gKp0t46K8VT9hsvZVaTNjhcZBs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -41,6 +42,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -81,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597963058512</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added unpacking assignment">
+      <created>1597973243197</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597973243197</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -94,32 +103,34 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="completed txt file for game" />
-    <option name="LAST_COMMIT_MESSAGE" value="completed txt file for game" />
+    <MESSAGE value="added unpacking assignment" />
+    <option name="LAST_COMMIT_MESSAGE" value="added unpacking assignment" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="936" height="269" key="GridCell.Tab.0.bottom" timestamp="1597968796249">
+    <state width="1899" height="269" key="GridCell.Tab.0.bottom" timestamp="1598287326301">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="269" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597968796249" />
-    <state width="936" height="269" key="GridCell.Tab.0.center" timestamp="1597968796249">
+    <state width="1899" height="269" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1598287326301" />
+    <state width="1899" height="269" key="GridCell.Tab.0.center" timestamp="1598287326301">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="269" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597968796249" />
-    <state width="936" height="269" key="GridCell.Tab.0.left" timestamp="1597968796249">
+    <state width="1899" height="269" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1598287326301" />
+    <state width="1899" height="269" key="GridCell.Tab.0.left" timestamp="1598287326301">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="269" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597968796249" />
-    <state width="936" height="269" key="GridCell.Tab.0.right" timestamp="1597968796249">
+    <state width="1899" height="269" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1598287326301" />
+    <state width="1899" height="269" key="GridCell.Tab.0.right" timestamp="1598287326301">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="936" height="269" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597968796249" />
-    <state x="72" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597963065791">
+    <state width="1899" height="269" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1598287326301" />
+    <state x="72" y="253" key="Vcs.Push.Dialog.v2" timestamp="1597973249587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="72" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597963065791" />
+    <state x="72" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1597973249587" />
     <state x="297" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597963039705">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
