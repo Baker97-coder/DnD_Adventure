@@ -10,6 +10,7 @@ def skeleton_damage(skeleton_hitpoints):
         print("you killed the skeleton! he returns to the under.")
     else:
         print("The skeleton staggers, but is 'alive'.")
+    print("")
     return skeleton_hitpoints
 
 
@@ -69,12 +70,22 @@ print("you hear a shuffling slowly, but steadily getting louder. after walking t
 
 first_skel = Skeletons(skel_attack, skel_hitpoints, skel_current_hitpoints, 1)
 
+# first encounter with a skeleton, i initialize a skeleton instance and the while statement
+# keeps running while the skeleton hit points are over 0
+
 while first_skel.skel_current_hitpoints > 0:
     player_attack = input("do you use your bow or sword? : ")
     if "bow" in player_attack:
-        print("\nyou pull out your bow with a silent confidence that speaks to your skill, you take an arrow \n"
+        print("\nyou take out an arrow with a silent confidence that speaks to your skill \n"
               "and pull it against the string. You let it fly")
         first_skel.skel_current_hitpoints = skeleton_damage(first_skel.skel_current_hitpoints)
     else:
-        print("You take out your sword with fire lighting inside you. You charge straight to your foe and strike!")
+        print("You hold your sword as a fire burns hot inside you and you strike!")
         first_skel.skel_current_hitpoints = skeleton_damage(first_skel.skel_current_hitpoints)
+    if first_skel.skel_distance > 0:
+        first_skel.skel_distance = first_skel.skel_distance - 1
+    elif first_skel.skel_distance > 0 & first_skel.skel_current_hitpoints > 0:
+        enemy_damage = random.randint(1, first_skel.skel_attack)
+        print("The skeleton hits you with his sword, you take " + str(enemy_damage))
+        Current_hit_point = int(Current_hit_point) - enemy_damage
+        print("You have " + str(Current_hit_point) + " hitpoints")
