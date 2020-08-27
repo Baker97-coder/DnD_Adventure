@@ -137,9 +137,11 @@ if "y" in first_door:
 
             room_skel1.skel_distance -= 1
             room_skel2.skel_distance -= 1
-            print(room_skel2.skel_current_hitpoints)
-            print(room_skel1.skel_current_hitpoints)
     else:
-        print("you could not open the door, it was too heavy. You continue on.")
+        print("you could not open the door, it was too heavy. You continue on.\n")
 
-print("You start your way down the cave again.")
+print("You start your way down the cave again.\n")
+
+print("As you make your way further, you notice the cave starts the widen gradually. You see a light far into the \n"
+      "distance. When you reach near the end of the tunnel, you stare at the mountains of gold, diamonds, rubies, \n"
+      "")
