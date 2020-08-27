@@ -118,11 +118,11 @@ if "y" in first_door:
         while room_skel1.skel_current_hitpoints > 0 or room_skel2.skel_current_hitpoints > 0:
             player_attack = input("do you use your bow or sword? : ")
 
-            if room_skel1.skel_current_hitpoints > 0 & room_skel2.skel_current_hitpoints > 0:
+            if room_skel1.skel_current_hitpoints > 0 and room_skel2.skel_current_hitpoints > 0:
                 attack_which = int(input("Which skeleton? (1) for first one (he is closest), (2) for second one : "))
-            elif room_skel2.skel_current_hitpoints > 0 & room_skel1.skel_current_hitpoints <= 0:
+            elif room_skel2.skel_current_hitpoints > 0 and room_skel1.skel_current_hitpoints <= 0:
                 attack_which = 2
-            elif room_skel2.skel_current_hitpoints <= 0 & room_skel1.skel_current_hitpoints > 0:
+            elif room_skel2.skel_current_hitpoints <= 0 and room_skel1.skel_current_hitpoints > 0:
                 attack_which = 1
 
             if attack_which == 1:
@@ -130,13 +130,15 @@ if "y" in first_door:
             else:
                 room_skel2.skel_current_hitpoints = sword_bow_attack(room_skel2)
 
-            if room_skel1.skel_distance <= 0 & room_skel1.skel_current_hitpoints > 0:
+            if room_skel1.skel_distance <= 0 and room_skel1.skel_current_hitpoints > 0:
                 skel_attack_to_player(room_skel1, Current_hit_point)
-            if room_skel2.skel_distance <= 0 & room_skel2.skel_current_hitpoints > 0:
+            if room_skel2.skel_distance <= 0 and room_skel2.skel_current_hitpoints > 0:
                 skel_attack_to_player(room_skel2, Current_hit_point)
 
             room_skel1.skel_distance -= 1
             room_skel2.skel_distance -= 1
+            print(room_skel2.skel_current_hitpoints)
+            print(room_skel1.skel_current_hitpoints)
     else:
         print("you could not open the door, it was too heavy. You continue on.")
 
