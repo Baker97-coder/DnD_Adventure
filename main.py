@@ -2,6 +2,12 @@ import random
 import sys
 
 
+def check_if_dead():
+    if Current_hit_point == 0:
+        print("You have died.")
+        sys.exit()
+
+
 def skeleton_damage(skeleton_hitpoints):
     player_damage = random.randint(1, int(potential_attack_damage))
     print("You deal " + str(player_damage) + " damage towards the skeleton")
@@ -25,13 +31,12 @@ def sword_bow_attack(enemy):
     return enemy.skel_current_hitpoints
 
 
-def skel_attack_to_player(skeleton, current_hit_point):
+def skel_attack_to_player(skeleton, current_hit_points):
     enemy_damage = random.randint(1, skeleton.skel_attack)
-    print("The skeleton hits you with his sword, you take " + str(enemy_damage))
-    current_hit_point = int(current_hit_point) - enemy_damage
-    print("You have " + str(current_hit_point) + " hitpoints")
-    return current_hit_point
-
+    print("The skeleton hits you with his sword, you take " + str(enemy_damage) + " damage")
+    current_hit_points = int(current_hit_points) - enemy_damage
+    print("You have " + str(Current_hit_point) + " hitpoints\n")
+    return current_hit_points
 # main
 
 
@@ -89,7 +94,7 @@ print("you hear a shuffling slowly, but steadily getting louder. after walking t
 
 first_skel = Skeletons(skel_attack, skel_hitpoints, skel_current_hitpoints, 1)
 
-# first encounter with a skeleton, i initialize a skeleton instance and the while statement
+# first encounter with a skeleton, I initialize a skeleton instance and the while statement
 # keeps running while the skeleton hit points are over 0
 
 while first_skel.skel_current_hitpoints > 0:
@@ -99,11 +104,15 @@ while first_skel.skel_current_hitpoints > 0:
         Current_hit_point = skel_attack_to_player(first_skel, Current_hit_point)
     first_skel.skel_distance -= 1
 
+    check_if_dead()
+
 print("After your victory, you continue deeper into the cave. You realize you haven't made any\n"
       "kind of turn or twist, it just goes further. Eventually you come across a door on your right.\n"
       "It's an ancient door and you're not sure it will even open due to its age.\n")
 
 first_door = input("Do you try to open and enter the room? (y) or (n) : ")
+
+has_read_note = False
 
 if "y" in first_door:
     if int(Strength) > 10:
@@ -131,17 +140,30 @@ if "y" in first_door:
                 room_skel2.skel_current_hitpoints = sword_bow_attack(room_skel2)
 
             if room_skel1.skel_distance <= 0 and room_skel1.skel_current_hitpoints > 0:
-                skel_attack_to_player(room_skel1, Current_hit_point)
+                Current_hit_point = skel_attack_to_player(room_skel1, Current_hit_point)
             if room_skel2.skel_distance <= 0 and room_skel2.skel_current_hitpoints > 0:
-                skel_attack_to_player(room_skel2, Current_hit_point)
+                Current_hit_point = skel_attack_to_player(room_skel2, Current_hit_point)
 
             room_skel1.skel_distance -= 1
             room_skel2.skel_distance -= 1
-    else:
-        print("you could not open the door, it was too heavy. You continue on.\n")
+
+            check_if_dead()
+
+    print("\nYou defeated the skeletons and you open the chest to find a note that read\n"
+          "'The Dragon loves when you compliment him on his gold stash.'")
+    has_read_note = True
+else:
+    print("you could not open the door, it was too heavy. You continue on.\n")
 
 print("You start your way down the cave again.\n")
-
 print("As you make your way further, you notice the cave starts the widen gradually. You see a light far into the \n"
       "distance. When you reach near the end of the tunnel, you stare at the mountains of gold, diamonds, rubies, \n"
-      "")
+      "Then you see the dragon. She's massive. It dwarfs war elephants. Its scales are a beautiful dark red with its \n"
+      "wings on its two front 'arms'. It doesnt notice you.\n")
+
+does_player_sneak = input("You see two ways to go about this.\n\n"
+                          "1) You sneak closer to the dragon to either talk to it or attempt to kill it\n\n"
+                          "2) You can run in, bows blazing and attempt to scare it. Doing so might intimidate the\n"
+                          "dragon or it might not, it's a risk you'd have to take.\n\n"
+                          "What do you chose to do? (1) for sneaking (2) for running in : ")
+
