@@ -2,7 +2,7 @@ import random
 import sys
 
 
-def check_if_dead():
+def check_if_player_is_dead():
     if Current_hit_point == 0:
         print("You have died.")
         sys.exit()
@@ -37,6 +37,7 @@ def skel_attack_to_player(skeleton, current_hit_points):
     current_hit_points = int(current_hit_points) - enemy_damage
     print("You have " + str(Current_hit_point) + " hitpoints\n")
     return current_hit_points
+
 # main
 
 
@@ -47,7 +48,7 @@ with open("Eldar_Dracarys.txt", "r") as character_sheet:
     data = character_sheet.readlines()
 
 # assignment unpacking
-# for getting the player sheet into the game
+# for getting the player sheet into the game, character sheet must follow this format
 
 name, Strength, S_modifier,\
 Dexterity, D_modifier, Constitution, C_modifier, Intelligence,\
@@ -56,7 +57,7 @@ Current_hit_point, potential_attack_damage\
 = [d.split(":")[1].split("/n")[0] for d in data]
 
 
-# for getting a skeleton into the game
+# for getting a skeleton (game enemy) into the game
 with open("Skeleton.txt", "r") as skeleton_sheet:
     skel_data = skeleton_sheet.readlines()
 
@@ -94,17 +95,17 @@ print("you hear a shuffling slowly, but steadily getting louder. after walking t
 
 first_skel = Skeletons(skel_attack, skel_hitpoints, skel_current_hitpoints, 1)
 
-# first encounter with a skeleton, I initialize a skeleton instance and the while statement
-# keeps running while the skeleton hit points are over 0
+# first encounter with a skeleton
 
 while first_skel.skel_current_hitpoints > 0:
     player_attack = input("do you use your bow or sword? : ")
     sword_bow_attack(first_skel)
+
     if first_skel.skel_distance <= 0 & first_skel.skel_current_hitpoints > 0:
         Current_hit_point = skel_attack_to_player(first_skel, Current_hit_point)
     first_skel.skel_distance -= 1
 
-    check_if_dead()
+    check_if_player_is_dead()
 
 print("After your victory, you continue deeper into the cave. You realize you haven't made any\n"
       "kind of turn or twist, it just goes further. Eventually you come across a door on your right.\n"
@@ -113,6 +114,8 @@ print("After your victory, you continue deeper into the cave. You realize you ha
 first_door = input("Do you try to open and enter the room? (y) or (n) : ")
 
 has_read_note = False
+
+# second encounter with enemies
 
 if "y" in first_door:
     if int(Strength) > 10:
@@ -147,13 +150,14 @@ if "y" in first_door:
             room_skel1.skel_distance -= 1
             room_skel2.skel_distance -= 1
 
-            check_if_dead()
+            check_if_player_is_dead()
 
     print("\nYou defeated the skeletons and you open the chest to find a note that read\n"
           "'The Dragon loves when you compliment him on his gold stash.'")
     has_read_note = True
-else:
-    print("you could not open the door, it was too heavy. You continue on.\n")
+
+    else:
+        print("you could not open the door, it was too heavy. You continue on.\n")
 
 print("You start your way down the cave again.\n")
 print("As you make your way further, you notice the cave starts the widen gradually. You see a light far into the \n"
@@ -166,4 +170,10 @@ does_player_sneak = input("You see two ways to go about this.\n\n"
                           "2) You can run in, bows blazing and attempt to scare it. Doing so might intimidate the\n"
                           "dragon or it might not, it's a risk you'd have to take.\n\n"
                           "What do you chose to do? (1) for sneaking (2) for running in : ")
+
+# Third and final encounter with the dragon
+
+if "y" in does_player_sneak:
+    print("\nYou choose to sneak closer to the dragon. He does not see or hear you.\n")
+    print("You are not close to the dragon. You think of three options before you")
 
