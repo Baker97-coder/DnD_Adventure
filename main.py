@@ -152,9 +152,9 @@ if "y" in first_door:
 
             check_if_player_is_dead()
 
-    print("\nYou defeated the skeletons and you open the chest to find a note that read\n"
-          "'The Dragon loves when you compliment him on his gold stash.'")
-    has_read_note = True
+            print("\nYou defeated the skeletons and you open the chest to find a note that read\n"
+                  "'The Dragon loves when you compliment him on his gold stash.'")
+            has_read_note = True
 
     else:
         print("you could not open the door, it was too heavy. You continue on.\n")
@@ -173,7 +173,9 @@ does_player_sneak = input("You see two ways to go about this.\n\n"
 
 # Third and final encounter with the dragon
 
-if "y" in does_player_sneak:
+if does_player_sneak == 1:
     print("\nYou choose to sneak closer to the dragon. He does not see or hear you.\n")
-    print("You are not close to the dragon. You think of three options before you")
+    print("You are now close to the dragon. You think of two options before you\n"
+          "1) You could choose to attack the dragon 2) You could choose to negotiate with the dragon")
+
 
