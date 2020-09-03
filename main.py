@@ -165,17 +165,29 @@ print("As you make your way further, you notice the cave starts the widen gradua
       "Then you see the dragon. She's massive. It dwarfs war elephants. Its scales are a beautiful dark red with its \n"
       "wings on its two front 'arms'. It doesnt notice you.\n")
 
-does_player_sneak = input("You see two ways to go about this.\n\n"
-                          "1) You sneak closer to the dragon to either talk to it or attempt to kill it\n\n"
-                          "2) You can run in, bows blazing and attempt to scare it. Doing so might intimidate the\n"
-                          "dragon or it might not, it's a risk you'd have to take.\n\n"
-                          "What do you chose to do? (1) for sneaking (2) for running in : ")
+does_player_sneak = input(int("You see two ways to go about this.\n\n"
+                              "1) You sneak closer to the dragon to either talk to it or attempt to kill it\n\n"
+                              "2) You can run in, bows blazing and attempt to scare it. Doing so might intimidate the\n"
+                              "dragon or it might not, it's a risk you'd have to take.\n\n"
+                              "What do you chose to do? (1) for sneaking (2) for running in : "))
 
 # Third and final encounter with the dragon
 
 if does_player_sneak == 1:
     print("\nYou choose to sneak closer to the dragon. He does not see or hear you.\n")
-    print("You are now close to the dragon. You think of two options before you\n"
-          "1) You could choose to attack the dragon 2) You could choose to negotiate with the dragon")
+    player_attack_or_negotiate = input(int(("You are now close to the dragon. You think of two options before you\n"
+                                            "1) You could choose to attack the dragon 2) You could choose to negotiate"
+                                            "with the dragon : ")))
+    if player_attack_or_negotiate == 1:
 
+    else:
 
+else:
+    print("You charge in and yell with a battle cry that echos the cave. The dragon hears you and turns to face you,\n"
+          " ready for battle.")
+    print("As you get closer the dragon rears its head and its throat begins to bellow and turn into a searing blue\n"
+          " color. The dragon unleashes hell from its mouth and the gates welcome you with open arms as you are\n"
+          " incinerated instantly. Your hitpoints are reduced to zero.")
+
+    Current_hit_point = 0
+    check_if_player_is_dead()

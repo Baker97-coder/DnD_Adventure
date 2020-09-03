@@ -1,0 +1,3 @@
+dragon_attack :12
+dragon_hitpoints :34
+dragon_current_hitpoints : 34
